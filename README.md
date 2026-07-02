@@ -1,8 +1,6 @@
-# AdventureWorks-SQL-EDA
+# Retail Sales EDA (SQL)
 
-# AdventureWorks Sales & Customer Analytics (SQL)
-
-Exploratory data analysis on the AdventureWorks bike sales dataset — a B2C bicycle manufacturing and retail company selling bikes, components, clothing, and accessories to customers across Australia, Canada, France, Germany, the UK, and the US.
+Exploratory data analysis on a retail sales dataset (AdventureWorks — bike manufacturing and retail company) using SQL Server, covering customer demographics, product performance, and revenue trends.
 
 ## Dataset
 Star schema with 3 tables:
