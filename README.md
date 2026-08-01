@@ -1,5 +1,4 @@
 # Retail Sales EDA (SQL)
-
 Exploratory data analysis on a retail sales dataset (AdventureWorks — bike manufacturing and retail company) using SQL Server, covering customer demographics, product performance, and revenue trends.
 
 ## Dataset
@@ -15,11 +14,21 @@ Star schema with 3 tables:
 - How does revenue break down by product category and customer country?
 - What's the customer base's gender and country distribution?
 
+## Advanced Analysis
+
+Beyond the initial exploratory queries, this project includes deeper analytical SQL covering customer behavior and sales trends:
+
+- **Month-over-Month (MoM) Growth** — Tracks total sales by month and calculates the change and % growth compared to the previous month using the `LAG()` window function.
+- **RFM Segmentation** — Scores every customer on Recency (how recently they bought), Frequency (how often), and Monetary value (how much they spent), then classifies them into segments such as Champions, Loyal Customers, At Risk, and Lost/Churned.
+- **Cohort Retention** — Groups customers by the month of their first purchase and tracks how many customers from each cohort remained active in the months that followed.
+- **Top Products per Category** — Uses the `RANK()` window function to identify the top 3 revenue-generating products within each product category.
+
+**Data quality notes:** 19 rows had null `order_date` values and were excluded from date-based calculations (MoM growth, cohort retention, recency). Negative `sales_amount`/`quantity` values were reviewed and represent legitimate returns. Recency in the RFM query is calculated relative to the dataset's most recent order date (not the current real-world date), since the dataset itself is historical.
+
+
 ## Tools
 SQL Server Management Studio (T-SQL)
 
 ## Next Steps
-- RFM customer segmentation using window functions (NTILE)
-- Cohort retention analysis (first-purchase-month cohorts tracked over time)
 - Market basket / product affinity analysis (which categories are bought together)
-- Visualization layer in PowerBI connected live to the database
+- Visualization layer in Power BI connected live to the database
