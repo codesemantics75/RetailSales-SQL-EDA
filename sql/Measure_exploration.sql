@@ -1,6 +1,6 @@
 SELECT SUM(sales_amount) AS total_sales 
-FROM gold.fact_sales 
-
+FROM gold.fact_sales
+  
 SELECT SUM(quantity) AS total_quantity 
 FROM gold.fact_sales 
 
